@@ -1,8 +1,6 @@
-#r "BuildTool/bin/Debug/BuildTool.dll"
-using BuildTool;
-using System.IO;
-var t = typeof(BuildPack);
-System.Diagnostics.Debugger.Launch();
-var tool = Require<BuildPack>();
+#r "TestPack/bin/Debug/TestPack.dll"
+using ScriptCsTest;
 
-tool.Run(Path.Combine(Environment.CurrentDirectory, "WpfApplication", "WpfApplication.csproj"));
+//System.Diagnostics.Debugger.Launch();
+var tool = Require<TestPack>();
+tool.Hello("World");
