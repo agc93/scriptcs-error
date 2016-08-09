@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTool", "BuildTool\Buil
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ABF0267B-30CD-4C40-B305-778C636F55BE}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		test.csx = test.csx
 	EndProjectSection
 EndProject

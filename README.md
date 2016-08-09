@@ -1,6 +1,6 @@
 ## Testing
 
-Build the `BuildTool` project, and copy `BuildTool.dll` and `ScriptCs.Contracts.dll` to the `scripts/bin` directory and run `test.csx` to test.
+Build the `BuildTool` project, and copy `BuildTool.dll`, `ReferencedLib.dll` and `ScriptCs.Contracts.dll` to the `scripts/bin` directory and run `test.csx` to test.
 
 ---
 
