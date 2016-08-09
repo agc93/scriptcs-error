@@ -3,9 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Build.Evaluation;
-using Microsoft.Build.Execution;
-using Microsoft.Build.Framework;
 using ScriptCs.Contracts;
 
 namespace BuildTool
@@ -29,11 +26,21 @@ namespace BuildTool
 
         public override void Initialize(IScriptPackSession session)
         {
-            base.Initialize(session);
-            session.AddReference("Microsoft.Build.Framework");
-            session.AddReference("Microsoft.Build.Utilities");
-            session.AddReference("Microsoft.Build.Tasks");
+            session.AddReference(MSBuildResolver.GetMSBuildPath("Microsoft.Build"));
+            session.AddReference(MSBuildResolver.GetMSBuildPath("Microsoft.Build.Framework"));
+            session.AddReference(MSBuildResolver.GetMSBuildPath("Microsoft.Build.Tasks"));
+            session.AddReference(MSBuildResolver.GetMSBuildPath("Microsoft.Build.Utilities"));
+
+            session.ImportNamespace("Microsoft.Build");
+            session.ImportNamespace("Microsoft.Build.Framework");
+            session.ImportNamespace("Microsoft.Build.Evaluation");
+            session.ImportNamespace("Microsoft.Build.Execution");
+
             session.ImportNamespace("BuildTool");
+
+            base.Initialize(session);
+
+            
         }
     }
 }
