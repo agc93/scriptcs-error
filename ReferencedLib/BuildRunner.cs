@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Execution;
 
-namespace BuildTool
+namespace ReferencedLib
 {
     /// <summary>
     /// This class is just abstracting the MSBuild implementation details away from the script pack
     /// </summary>
-    internal static class BuildRunner
+    public static class BuildRunner
     {
         private static BuildManager Manager => Microsoft.Build.Execution.BuildManager.DefaultBuildManager;
 
-        internal static void Build(string projectFilePath) {
+        public static void Build(string projectFilePath) {
             var pc = new ProjectCollection();
             if (!File.Exists(projectFilePath))
             {

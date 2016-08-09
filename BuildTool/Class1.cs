@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReferencedLib;
 using ScriptCs.Contracts;
 
 namespace BuildTool
